@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="robots" content="index, follow">
+    <link rel="llm-context" href="/llms.txt" type="text/plain" />
+
+    <title>Open-source infrastructure for AI agents | MUXI</title>
+    <meta name="description" content="MUXI makes agents native primitives — not ad hoc scripts or chained prompts — but infrastructure-level processes with built-in orchestration, observability, and scale.">
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="all">
+
+    <!-- favicon for light and dark mode -->
+    <link href="./favicon-dark.png" rel="icon" type="image/png" media="(prefers-color-scheme: light)">
+    <link href="./favicon-light.png" rel="icon" type="image/png" media="(prefers-color-scheme: dark)">
+
+    <!-- apple touch icon for light and dark mode -->
+    <link rel="apple-touch-icon" sizes="512x512" href="./apple-touch-icon.png"> <!-- fallback -->
+    <link rel="apple-touch-icon" sizes="512x512" href="./apple-touch-icon-light.png" media="(prefers-color-scheme: light)">
+    <link rel="apple-touch-icon" sizes="512x512" href="./apple-touch-icon-dark.png" media="(prefers-color-scheme: dark)">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MUXI">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#faf9f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#131215" media="(prefers-color-scheme: dark)">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content="https://docs.local/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Open-source infrastructure for AI agents | MUXI" />
+    <meta property="og:description" content="MUXI makes agents native primitives — not ad hoc scripts or chained prompts — but infrastructure-level processes with built-in orchestration, observability, and scale." />
+    <meta property="og:image" content="./img/ogcard.webp" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="muxi.org" />
+    <meta property="twitter:site" content="@muxi_ai" />
+    <meta property="twitter:url" content="https://docs.local/" />
+    <meta name="twitter:title" content="Open-source infrastructure for AI agents | MUXI" />
+    <meta name="twitter:description" content="MUXI makes agents native primitives — not ad hoc scripts or chained prompts — but infrastructure-level processes with built-in orchestration, observability, and scale." />
+    <meta name="twitter:image" content="./img/ogcard.webp" />
+
+</head>
+
+<body>
+  <div id="container"></div>
+  <div id="text-container">
+    <svg viewBox="0 0 1314.79 600" xmlns="http://www.w3.org/2000/svg" id="muxi-wordmark">
+      <g>
+        <path
+          d="m760.73 381.32h-31.14l-56.3-166.19v166.19h-35.64v-215.01h52.7l55.4 164.7 55.4-164.7h51.51v215.01h-35.64v-166.19l-56.3 166.19z">
+        </path>
+        <path
+          d="m966.64 384.32c-16.97 0-31.99-3.24-45.07-9.73-13.08-6.48-23.26-16.27-30.54-29.35-7.29-13.07-10.93-29.5-10.93-49.26v-129.66h38.33v128.46c0 12.98 1.99 23.61 5.99 31.89 3.99 8.29 9.63 14.33 16.92 18.12s15.72 5.69 25.3 5.69 18.27-1.89 25.45-5.69c7.19-3.79 12.83-9.83 16.92-18.12 4.09-8.28 6.14-18.91 6.14-31.89v-128.46h38.33v129.66c0 19.76-3.65 36.19-10.93 49.26-7.29 13.08-17.47 22.86-30.54 29.35-13.08 6.49-28.2 9.73-45.37 9.73z">
+        </path>
+        <path
+          d="m1260.8 166.32-72.17 105.71 75.16 109.3h-43.12l-54.8-80.85-55.1 80.85h-45.92l79.16-109.3-72.47-105.71h43.12l52.1 76.96 52.11-76.96h41.92z">
+        </path>
+        <path d="m1314.79 166.32v215.01h-38.33v-215.01z"></path>
+      </g>
+      <g>
+        <path
+          d="m439.7 71.99-62.27 35.88-58.06 137.03-80.57 46.53v61.4l118.29-68.1 28.59-55.85v103.3h-19.9v19.9h19.9v19.9h-19.9v19.9h19.9v34.57l54.02-31.17v-146.5h-19.9v-19.9h19.9v-19.9h-19.9v-19.9h19.9v-19.9h-19.9v-19.9h19.9z"
+          opacity=".2"></path>
+        <path
+          d="m286.05 241.18-125.06-95.96-68.12 39.51v110.49h-19.9v19.9h19.9v19.9h-19.9v19.9h19.9v19.9h-19.9v19.9h19.9l.47 176.45 52.59-30.33v-328.8l82.92 62.14z"
+          opacity=".2"></path>
+        <path
+          d="m297.45 43.44-58.46 138.95-77.82-60.27-79.04-44.59-82.13 47.42v269.77h19.9v19.9h-19.9v19.9h19.9v19.9h-19.9v19.9h19.9v20.85h-19.9v56.99l83.14 47.84 82.69-47.69s.19-213.5.57-213.5c.57 0 62.45 42.83 62.45 42.83l63.96-36.94v12.11s0 19.9 0 19.9v30.22s82.96 48.22 82.96 48.22l83.82-48.41v-157.96s-19.9 0-19.9 0v-19.9h19.9v-19.9s-19.9 0-19.9 0v-19.9h19.9v-19.9s-19.9 0-19.9 0v-19.9h19.9v-99.27s-86.61-50.01-86.61-50.01zm131.56 11.74-51.44 29.7-55.88-32.26 51.31-29.62zm-68.85 42.71-56.57 134.08-48.53-37.25 52.7-127.09zm79.54 51.39h-19.9v19.9h19.9v19.9h-19.9v19.9h19.9v19.9h-19.9v19.9h19.9v146.49l-54.01 31.18v-34.58h-19.9v-19.9h19.9v-19.9h-19.9v-19.9h19.9v-103.29l-28.6 55.85-118.28 68.1v-61.41l80.57-46.53 58.06-137.03 62.27-35.88v77.29zm-297.73-16.21-58.83 34.25-58.32-33.72 58.87-34.17 58.28 33.65zm144.08 108.11-57.2 33-82.92-62.14v328.8s-52.59 30.32-52.59 30.32l-.47-176.45h-19.9v-19.9h19.9v-19.9h-19.9v-19.9h19.9v-19.9h-19.9v-19.9h19.9v-110.49s68.13-39.51 68.13-39.51l125.06 95.96zm-213.08-56.81v110.85h-19.9v19.9h19.9v19.9h-19.9v19.9h19.9v19.9h-19.9v19.9h19.9s0 176.45 0 176.45l-53.07-30.5v-45.5h19.9v-20.85h-19.9v-19.9h19.9v-19.9h-19.9v-19.9h19.9v-19.9h-19.9v-240.99zm145.93 107.06v61.41s-53.07-37.24-53.07-37.24v-63.09m199.95 79.67h-19.9v19.9h19.9v19.9h-19.9v19.9h19.9v33.34l-53.07-30.04v-61.97s53.07-30.64 53.07-30.64v29.6z">
+        </path>
+      </g>
+    </svg>
+
+    <h2>
+      Infrastructure for production AI agents.
+    </h2>
+    <h3>
+      MUXI (<code>/muk-siː/</code>)
+      makes agents native primitives — not ad hoc scripts or chained prompts — but infrastructure-level processes with
+      built-in orchestration, observability, and scale.
+
+    </h3>
+    <p>Open-source. Self-hostable. <br class="mobile-only">Built for production.</p>
+    <p><strong>Coming soon.</strong></p>
+
+    <footer>
+      Early access launching soon:
+      <div class="icon-links">
+        <a href="https://github.com/muxi-ai" class="icon-link" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M14.5094 20.9056C14.5198 20.402 14.5349 19.6585 14.5349 19C14.5349 18 13.8548 17.0818 13.8548 17.0818C16.1129 16.834 18.4919 15.5037 18.4919 11.5393C18.4919 10.383 18.0887 9.84616 17.4435 9.10284L17.4579 9.0525C17.5588 8.7032 17.8583 7.66631 17.3226 6.29474C16.4758 6.00567 14.5403 7.40972 14.5403 7.40972C13.7339 7.16195 12.8871 7.07936 12 7.07936C11.1532 7.07936 10.3065 7.16195 9.5 7.40972C9.5 7.40972 7.52419 6.04697 6.71774 6.29474C6.15323 7.74009 6.47581 8.81377 6.59677 9.10284C5.95161 9.84616 5.62903 10.383 5.62903 11.5393C5.62903 15.5037 7.92742 16.834 10.1855 17.0818C10.1855 17.0818 9.5 17.8624 9.5 18.9312V20.9082V22.4578C4.76861 21.3309 1.25 17.0764 1.25 12C1.25 6.06294 6.06294 1.25 12 1.25C17.9371 1.25 22.75 6.06294 22.75 12C22.75 17.073 19.2361 21.3252 14.5094 22.4555V20.9056Z">
+            </path>
+          </svg>
+          Follow on GitHub
+        </a>
+        <a href="https://x.com/muxi_ai" class="icon-link" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+            style="transform: scale(0.9);">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              fill="currentColor">
+            </path>
+          </svg>
+          Follow on X
+        </a>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

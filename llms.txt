@@ -1,0 +1,175 @@
+# MUXI - The Agent Server
+
+> Open-source infrastructure for running AI agents in production. Not a framework. Not a wrapper. A Server.
+
+## What is MUXI?
+
+MUXI (Multiplexed eXtensible Intelligence, pronounced /muk-siː/) is production infrastructure purpose-built for AI agents. Unlike frameworks that you import as libraries, MUXI is a complete server that runs, orchestrates, and manages multi-agent systems at scale.
+
+**Core Philosophy:** Agents are native primitives – declared in YAML, orchestrated at the infrastructure layer, scaled like containers. No frameworks to fight. No queues to wrangle. Just infrastructure that understands what agents do.
+
+## Key Differentiators
+
+- **Infrastructure, not a framework**: Deploy with `muxi deploy` – agents go live instantly
+- **Formation-based deployment**: Complete AI systems packaged as deployable YAML units
+- **LLM-agnostic**: Use any provider (OpenAI, Anthropic, Google, AWS, Azure, local models)
+- **Multi-tenant by design**: Built-in user isolation with per-user credentials and RBAC
+- **Self-hosted**: Complete data sovereignty, runs anywhere (on-prem, cloud, air-gapped)
+- **Open source**: Elastic License 2.0 (ELv2) and Apache 2.0 – free for commercial use
+
+## Core Concepts
+
+### Formations
+
+A "formation" is a complete AI system packaged as a single deployable unit. Like a Dockerfile for containers, but for multi-agent intelligence. Formations include:
+
+- Agent definitions and configurations
+- Domain knowledge (files, URLs, documents)
+- MCP (Model Context Protocol) tool connections
+- Standard Operating Procedures (SOPs)
+- Triggers (schedules, webhooks)
+- Settings and environment variables
+
+All defined in declarative YAML. Version-controlled, portable, and deployable with one command.
+
+### The MUXI Stack
+
+Four architectural layers:
+
+1. **SDKs** - Python, JavaScript, Go, Swift, Java clients for programmatic interaction
+2. **APIs** - REST endpoints for deployments, chat, streaming, observability
+3. **Runtime** - Core orchestration: agents, memory, tools, task execution
+4. **Server** - Self-hosted infrastructure for production deployments
+
+### Agent-Native Infrastructure
+
+Agents aren't bolted on – they're native primitives. State persistence, task orchestration, and resource management happen at the infrastructure layer. Agents are declared, deployed, and scaled like containers.
+
+## Key Features
+
+### Deployment & Operations
+
+- **One-command deployment**: `muxi deploy` and you're live
+- **GitOps workflow**: Version-controlled YAML, CI/CD integration, instant rollbacks
+- **Hot updates**: Zero downtime deployments with automatic restarts
+- **Single binary**: No runtime dependencies, runs anywhere
+
+### Intelligence & Execution
+
+- **Intelligent task decomposition**: Complex requests automatically broken into executable subtasks
+- **Adaptive workflow creation**: Non-deterministic workflows generated based on context
+- **Agent collaboration**: Multi-agent coordination via A2A protocol
+- **Multimodal support**: Images, PDFs, audio, video processing out-of-the-box
+
+### Memory & Context
+
+- **Three-tier memory**: Buffer (immediate), persistent (long-term), vector (semantic)
+- **User synopsis caching**: LLM-synthesized profiles reduce costs by 80%+
+- **Intelligent context management**: Automatic FIFO cleanup with relevance scoring
+- **Domain knowledge system**: Pre-load agents with files, docs, policies via RAG
+
+### Integration & Tools
+
+- **MCP Protocol native**: Access 1,000+ tools (GitHub, Slack, Postgres, Stripe, etc.)
+- **Multi-user MCP access**: Per-user OAuth tokens and API keys with encryption
+- **LLM provider agnostic**: 21 providers, 300+ models via OneLLM
+- **Automatic failover**: Provider switching when services fail
+
+### Production Features
+
+- **Multi-tenancy**: Complete session isolation with per-user credentials
+- **Real-time streaming**: WebSocket and SSE support for live updates
+- **Built-in observability**: 157 event types, stream to 10+ systems
+- **Enterprise resilience**: Circuit breakers, exponential backoff, graceful degradation
+- **92% cache hit rate**: Semantic caching reduces LLM costs dramatically
+
+### Triggers & Automation
+
+- **Natural language scheduling**: "Check email every hour" or "remind me tomorrow at 2pm"
+- **Webhook triggers**: External systems activate agents via HTTP endpoints
+- **Event-driven architecture**: Unified orchestration for schedules, webhooks, user interactions
+- **Dynamic async execution**: Smart sync/async switching with complexity detection
+
+### Developer Experience
+
+- **Standard Operating Procedures**: Define organizational knowledge agents reason over
+- **Artifact generation**: Create documents, spreadsheets, presentations, code files
+- **Type-safe SDKs**: Full IDE autocomplete and type checking
+- **88.9% test coverage**: Production-ready from day one
+
+## Architecture
+
+MUXI uses a formation-centric architecture where complete AI systems are packaged as YAML definitions. The server manages:
+
+- Formation lifecycle (deploy, update, rollback)
+- Multi-tenant isolation and RBAC
+- Agent orchestration and task execution
+- Memory management across three tiers
+- Tool access via MCP protocol
+- Event streaming and observability
+
+## Use Cases
+
+- **Customer support systems**: Multi-agent teams handling tickets, refunds, inquiries
+- **Internal tooling**: Automating workflows across GitHub, Slack, Jira, etc.
+- **Document processing**: Extract, analyze, and generate reports from files
+- **Data analysis platforms**: Query databases, generate visualizations, create reports
+- **Booking and scheduling**: Coordinate calendars, send notifications, manage reservations
+- **SaaS product features**: Embed AI capabilities in your application
+
+## Licensing
+
+- **MUXI Server & Runtime**: Elastic License 2.0 (ELv2)
+- **Formations, CLI, SDKs**: Apache 2.0
+
+**You CAN:**
+- Use for internal projects and products
+- Build and sell products that use MUXI
+- Deploy for clients and customers
+- Self-host on your infrastructure
+
+**You CANNOT:**
+- Offer MUXI itself as a hosted service (SaaS)
+
+## Technical Details
+
+- **Response time**: <100ms average
+- **Test coverage**: 88.9% across 11,000+ test lines
+- **Observability events**: 157 distinct event types
+- **LLM cache hit rate**: ~72% (semantic caching: 92%)
+- **Deployment**: Single binary or Docker container
+- **Supported platforms**: Linux, macOS, Windows
+- **Protocol support**: HTTP/REST, WebSocket, Server-Sent Events
+
+## Comparison with Frameworks
+
+| | MUXI | LangChain/CrewAI |
+|---|---|---|
+| **Type** | Server infrastructure | Python library |
+| **Deployment** | `muxi deploy` | Write deployment code |
+| **Configuration** | Declarative YAML | Imperative code |
+| **Multi-tenancy** | Built-in isolation | Build yourself |
+| **Observability** | Production monitoring included | Add external tools |
+| **Async/Scheduling** | Native support | Add Celery/etc. |
+
+Think: Flask is a framework. Nginx is infrastructure. MUXI is the Nginx for agents.
+
+## Business Model
+
+Open-source with sustainable revenue from support services, not paywalls:
+
+- Core stack is free and self-hostable forever
+- GitHub Sponsors for priority support
+- Professional services for enterprise deployments (coming soon)
+- No feature restrictions or bait-and-switch licensing
+
+## Community & Support
+
+- **GitHub**: https://github.com/muxi-ai
+- **Email**: hello@muxi.org
+- **Twitter**: @muxi_ai
+
+## Who Built This?
+
+Created by Ran Aroussi (@aroussi), a 30+ year tech veteran whose open-source libraries receive 10M+ monthly downloads. Author of "Production-Grade Agentic AI" (600+ page technical book). No VC funding, no exit timeline – built for long-term sustainability.
+
